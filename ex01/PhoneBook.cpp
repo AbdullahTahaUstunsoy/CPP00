@@ -3,11 +3,10 @@
 #include "Contact.hpp"
 
 PhoneBook::PhoneBook()
-{
-    
+{ 
 }
 
-void PhoneBook::addContact(int contactIndex, std::string (&input)[5]) //input'un kaç elemanlı olduğu önceden belli olduğu için parametre olarak alırken pointer ile aldım
+void PhoneBook::addContact(int contactIndex, std::string (&input)[5])
 {
     contacts[contactIndex].setFirstName(input[0]);
 	contacts[contactIndex].setLastName(input[1]);
