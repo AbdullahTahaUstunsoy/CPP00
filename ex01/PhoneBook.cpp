@@ -24,6 +24,7 @@ void PhoneBook::displayContacts(int contactCount) const
 	std::string new_nick_name;
 
 	i = 0;
+	std::cout << "---------------------------------------------" << std::endl;
 	while(i < contactCount)
 	{
 		new_name = contacts[i].getFirstName();
@@ -44,11 +45,43 @@ void PhoneBook::displayContacts(int contactCount) const
 			new_nick_name = contacts[i].getNickName().substr(0,9);
 			new_nick_name += ".";
 		}
-		std::cout << std::right << std::setw(10) << contactCount << "|";
+		std::cout << "|" << std::right << std::setw(10) << i << "|";
 		std::cout << std::right << std::setw(10) << new_name << "|";
 		std::cout << std::right << std::setw(10) << new_last_name << "|";
-		std::cout << std::right << std::setw(10) << new_nick_name << std::endl;
-		std::cout << "------------------------------------------------------" << std::endl;
+		std::cout << std::right << std::setw(10) << new_nick_name << "|" << std::endl;
+		std::cout << "---------------------------------------------" << std::endl;
 		i++;
 	}
+}
+
+void PhoneBook::displayContactDetails(int index) const
+{
+	std::string new_name;
+	std::string new_last_name;
+	std::string new_nick_name;
+
+	new_name = contacts[index].getFirstName();
+	new_last_name = contacts[index].getLastName();
+	new_nick_name = contacts[index].getNickName();
+	if(contacts[index].getFirstName().length() > 10)
+	{
+		new_name = contacts[index].getFirstName().substr(0, 9);
+		new_name += ".";
+	}
+	if(contacts[index].getLastName().length() > 10)
+	{
+		new_last_name = contacts[index].getLastName().substr(0,9);
+		new_last_name += ".";
+	}
+	if(contacts[index].getNickName().length() > 10)
+	{
+		new_nick_name = contacts[index].getNickName().substr(0,9);
+		new_nick_name += ".";
+	}
+	std::cout << "---------------------------------------------" << std::endl;
+	std::cout << "|" << std::right << std::setw(10) << index << "|";
+	std::cout << std::right << std::setw(10) << new_name << "|";
+	std::cout << std::right << std::setw(10) << new_last_name << "|";
+	std::cout << std::right << std::setw(10) << new_nick_name << "|" << std::endl;
+	std::cout << "---------------------------------------------" << std::endl;
 }

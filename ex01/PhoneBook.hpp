@@ -14,6 +14,7 @@ class PhoneBook {
 		  PhoneBook();
       void addContact(int contactIndex, std::string (&input)[5]);
       void displayContacts(int contactCount) const;
+      void displayContactDetails(int index) const;
 };
 
 #endif
