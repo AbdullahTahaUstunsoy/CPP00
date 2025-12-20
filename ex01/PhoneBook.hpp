@@ -8,11 +8,12 @@
 class PhoneBook {
 	
     private:
-		Contact contacts[8];
+    Contact contacts[8];
     
     public:
-		PhoneBook();
-
+		  PhoneBook();
+      void addContact(int contactIndex, std::string (&input)[5]);
+      void displayContacts(int contactCount) const;
 };
 
 #endif
