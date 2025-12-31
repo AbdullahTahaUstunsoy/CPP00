@@ -1,6 +1,6 @@
 # C++ Module 00 - Introduction to Object-Oriented Programming
 
-Bu modül, C++ diline giriş niteliğindedir. C dilinden C++'a geçiş sürecinde namespace, class, member functions, iostream ve basit veri saklama yapıları gibi temel konseptleri öğretmeyi amaçlayan bir **42 School** projesidir.
+Bu modül, C++ diline giriş niteliğindedir. C dilinden C++'a geçiş sürecinde namespace, class, member functions, iostream ve basit veri saklama yapıları gibi temel konseptleri öğretmeyi amaçlayan bir projedir.
 
 ---
 
